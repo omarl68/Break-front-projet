@@ -1,0 +1,35 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="index.html">
+                <img src="../../../../assets/images/Asset 3.svg" alt="break" />
+            </a>
+        </div>
+
+        <ul class="navbar-nav-left">
+            <li>
+                <a [routerLink]="['/menu']">Menu</a>
+            </li>
+            <li>
+                <a [routerLink]="['/nos-cofes']">Nos cofes</a>
+            </li>
+            <li>
+                <a [routerLink]="['/how-it-work']">how it work</a>
+            </li>
+            <li>
+                <a [routerLink]="['/contact']">contact</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav-right">
+
+            <li> <button class="btn btn-outline-dark" style="border-radius:100px ;" type="submit" [routerLink]="['/login']" >Sign in</button>
+
+            </li>
+            <li>
+                <button class="btn btn-dark " style="border-radius:100px ;" type="submit" [routerLink]="['/register']">Join now</button>
+            </li>
+        </ul>
+
+    </div>
+</nav>
