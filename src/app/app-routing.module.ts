@@ -1,6 +1,13 @@
+import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountSettingComponent } from './component/private/account-setting/account-setting.component';
+import { DashboardComponent } from './component/private/dashboard/dashboard.component';
+import { AddFoodComponent } from './component/private/food/add-food/add-food.component';
+import { FoodListComponent } from './component/private/food/food-list/food-list.component';
+import { UpdateFoodComponent } from './component/private/food/update-food/update-food.component';
+import { MessageList2Component } from './component/private/messages/message-list2/message-list2.component';
+import { MessagesComponent } from './component/private/messages/messages.component';
 import { OrderSuccessComponent } from './component/private/order-success/order-success.component';
 import { BoissonsComponent } from './component/public/boissons/boissons.component';
 import { ContactComponent } from './component/public/contact/contact.component';
@@ -67,6 +74,30 @@ const routes: Routes = [
   {
     path: 'order-success',
     component: OrderSuccessComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'food-list',
+    component: FoodListComponent
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent
+  },
+  {
+    path: 'add-food',
+    component: AddFoodComponent
+  },
+  {
+    path: 'update-food',
+    component: UpdateFoodComponent
+  },
+  {
+    path: 'messages/:id',
+    component: MessageList2Component
   },
   {
     path: '**',

@@ -1,36 +1,12 @@
 <app-navbar></app-navbar>
 <div class="container my-5">
-    <div class="row">
-        <h2 style="font-weight: bold;">PÂTISSERIES</h2>
-        <div class="col-4 my-2">
-            <div class="card h-100" >
-                <img src="../../../../assets/images/Starbucks_FR_Deliveroo_1200x1200_Croissant_au_Beurre.jpg.jpg" class="card-img-top img-fluid"  alt="Croissant au beurre">
-                <div class="card-body">
-                  <h5 class="card-title">Croissant au beurre</h5>
-                  <p class="card-text">Pur beurre AOP Charentes-Poitou - Cuit sur place chaque jour</p>
-                  <a href="#" class="btn btn-outline-success">add</a>
-                </div>
-              </div>
-        </div>
-        <div class="col-4 my-2">
-            <div class="card h-100" >
-                <img src="../../../../assets/images/Starbucks_FR_Deliveroo_1200x1200_Pain_au_Chocolat.jpg.jpg" class="card-img-top img-fluid"  alt="Iced_Latte_Glace">
-                <div class="card-body">
-                  <h5 class="card-title">Pain au chocolat</h5>
-                  <p class="card-text">Pur beurre AOP Charentes-Poitou - Cuit sur place chaque jour</p>
-                  <a href="#" class="btn btn-outline-success">add</a>
-                </div>
-              </div>
-        </div>
-        <div class="col-4 my-2">
-            <div class="card h-100" >
-                <img src="../../../../assets/images/Starbucks_FR_Deliveroo_1200x1200_Brownie_au_Chocolat.jpg.jpg" class="card-img-top img-fluid"  alt="Brownie au Chocolat">
-                <div class="card-body">
-                  <h5 class="card-title">Brownie au Chocolat</h5>
-                  <a href="#" class="btn btn-outline-success">add</a>
-                </div>
-              </div>
-        </div>
+  <h2 style="font-weight: bold;">PÂTISSERIES</h2>
+  <div class="row justify-content">
+    <div *ngFor="let food of foodsList" class="col-lg-4 col-md-6 my-5 wow fadeInUp" data-wow-delay="0.1s">
+      <app-food-item [title]="food.title" [content]="food.content" [image]="food.image">
+      </app-food-item>
     </div>
+  </div>
 </div>
+
 <app-footer></app-footer>

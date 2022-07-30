@@ -4,58 +4,90 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
 
-                    <div class="row my-5">
-                        <div class="col-md-9 col-lg-7">
-                            <div class="contact-wrap w-100 p-md-5 p-4">
-                                <h3 class="mb-4">Get in touch with us</h3>
-                                <div id="form-message-warning" class="mb-4"></div>
-                                <div id="form-message-success" class="mb-4">
-                                    Your message was sent, thank you!
-                                </div>
-                                <form >
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="label" for="name">Full Name</label>
-                                                <input type="text" class="form-control" name="name" id="name"
-                                                    placeholder="Name">
-                                            </div>
+                <div class="row my-5">
+                    <div class="col-md-9 col-lg-7">
+                        <div class="contact-wrap w-100 p-md-5 p-4">
+                            <h3 class="mb-4">Get in touch with us</h3>
+                            <div id="form-message-warning" class="mb-4"></div>
+                            <div id="form-message-success" class="mb-4">
+                                Your message was sent, thank you!
+                            </div>
+                            <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="label" for="name">Full Name</label>
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="Name" formControlName="name">
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="label" for="email">Email Address</label>
-                                                <input type="email" class="form-control" name="email" id="email"
-                                                    placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="label" for="subject">Subject</label>
-                                                <input type="text" class="form-control" name="subject" id="subject"
-                                                    placeholder="Subject">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="label" for="#">Message</label>
-                                                <textarea name="message" class="form-control" id="message" cols="30"
-                                                    rows="4" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 my-4">
-                                            <div class="form-group">
-                                                <input type="submit" value="Send Message" class="btn btn-success">
-                                                <div class="submitting"></div>
-                                            </div>
+                                        <div *ngIf="name?.touched && name?.invalid">
+                                            <small *ngIf="name?.errors?.['required']" class="text-danger">nom est
+                                                requis<br /></small>
+                                            <small *ngIf="name?.errors?.['pattern']" class="text-danger">nom
+                                                invalide<br /></small>
+                                            <small *ngIf="name?.errors?.['minlength']" class="text-danger">name must
+                                                contain two characters at least</small>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="label" for="email">Email Address</label>
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="Email" formControlName="email">
+                                        </div>
+                                        <div *ngIf="email?.touched && email?.invalid">
+                                            <small *ngIf="email?.errors?.['required']" class="text-danger">Email is
+                                                required<br /></small>
+                                            <small *ngIf="email?.errors?.['email']" class="text-danger">Invalid
+                                                Email<br /></small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="label" for="subject">Subject</label>
+                                            <input type="text" class="form-control" name="subject" id="subject"
+                                                placeholder="Subject" formControlName="subject">
+                                        </div>
+                                        <div *ngIf="subject?.touched && subject?.invalid">
+                                            <small *ngIf="subject?.errors?.['required']" class="text-danger">subject is
+                                                required<br /></small>
+                                            <small *ngIf="subject?.errors?.['pattern']" class="text-danger">Invalid
+                                                subject<br /></small>
+                                            <small *ngIf="subject?.errors?.['minlength']" class="text-danger">subject
+                                                must contain two characters at least</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="label" for="#">Message</label>
+                                            <textarea name="message" class="form-control" id="message" cols="30"
+                                                rows="4" placeholder="Message" formControlName="content"></textarea>
+                                        </div>
+                                        <div *ngIf="content?.touched && content?.invalid">
+                                            <small *ngIf="content?.errors?.['required']" class="text-danger">Message is
+                                                required<br /></small>
+                                            <small *ngIf="content?.errors?.['pattern']" class="text-danger">Invalid
+                                                Message<br /></small>
+                                            <small *ngIf="content?.errors?.['minlength']" class="text-danger">Message
+                                                must
+                                                contain ten characters at least</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 my-4">
+                                        <div class="form-group">
+                                            <input type="submit" value="Send Message" class="btn btn-success">
+                                            <div class="submitting"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col-3 mt-5 ms-5"><img src="../../../../assets/images/Asset 3.svg" alt=""></div>
                     </div>
+                    <div class="col-3 mt-5 ms-5"><img src="../../../../assets/images/Asset 3.svg" alt=""></div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <app-footer></app-footer>

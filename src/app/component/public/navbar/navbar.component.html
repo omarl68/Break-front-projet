@@ -2,7 +2,7 @@
     <div class="navbar-container">
         <div class="navbar-brand">
             <a href="index.html">
-                <img src="../../../../assets/images/Asset 3.svg" alt="break" />
+                <img [src]="imageUrl" alt="break" />
             </a>
         </div>
 
@@ -23,13 +23,20 @@
 
         <ul class="navbar-nav-right">
 
-            <li> <button class="btn btn-outline-dark" style="border-radius:100px ;" type="submit" [routerLink]="['/login']" >Sign in</button>
+            <li> <button *ngIf="!isLoggedIn" class="btn btn-outline-dark" style="border-radius:100px ;" type="submit" [routerLink]="['/login']" >Sign in</button>
 
             </li>
             <li>
-                <button class="btn btn-dark " style="border-radius:100px ;" type="submit" [routerLink]="['/register']">Join now</button>
+                <button *ngIf="!isLoggedIn" class="btn btn-dark " style="border-radius:100px ;" type="submit" [routerLink]="['/register']">Join now</button>
+            </li>
+            <li>
+                <button *ngIf="isLoggedIn" class="btn btn-dark " style="border-radius:100px ;" [routerLink]="['/']"><i class="fa-solid fa-cart-shopping"></i></button>
+            </li>
+            <li>
+                <button *ngIf="isLoggedIn" class="btn btn-dark " style="border-radius:100px ;"(click)="logout()" >Logout</button>
             </li>
         </ul>
+     
 
     </div>
 </nav>

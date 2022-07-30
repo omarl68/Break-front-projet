@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/public/home/home.component';
@@ -18,7 +18,21 @@ import { Page404Component } from './component/public/page404/page404.component';
 import { AccountSettingComponent } from './component/private/account-setting/account-setting.component';
 import { HowItWorkComponent } from './component/public/how-it-work/how-it-work.component';
 import { OrderSuccessComponent } from './component/private/order-success/order-success.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FoodItemComponent } from './component/public/food-item/food-item.component';
+import { BoissonItemComponent } from './component/public/boisson-item/boisson-item.component';
+import { CofeItemComponent } from './component/public/cofe-item/cofe-item.component';
+import { DashboardComponent } from './component/private/dashboard/dashboard.component';
+import { SideBarComponent } from './component/private/side-bar/side-bar.component';
+import { TopBarComponent } from './component/private/top-bar/top-bar.component';
+import { MessagesComponent } from './component/private/messages/messages.component';
+import { AddFoodComponent } from './component/private/food/add-food/add-food.component';
+import { FoodListComponent } from './component/private/food/food-list/food-list.component';
+import { UpdateFoodComponent } from './component/private/food/update-food/update-food.component';
+import { ToastrModule } from 'ngx-toastr';
+import { MessageList2Component } from './component/private/messages/message-list2/message-list2.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +52,28 @@ import { OrderSuccessComponent } from './component/private/order-success/order-s
     AccountSettingComponent,
     HowItWorkComponent,
     OrderSuccessComponent,
+    FoodItemComponent,
+    BoissonItemComponent,
+    CofeItemComponent,
+    DashboardComponent,
+    SideBarComponent,
+    TopBarComponent,
+    MessagesComponent,
+    AddFoodComponent,
+    FoodListComponent,
+    UpdateFoodComponent,
+    MessageList2Component,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(), 
+    CommonModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
