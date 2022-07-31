@@ -33,6 +33,13 @@ import { FoodListComponent } from './component/private/food/food-list/food-list.
 import { UpdateFoodComponent } from './component/private/food/update-food/update-food.component';
 import { ToastrModule } from 'ngx-toastr';
 import { MessageList2Component } from './component/private/messages/message-list2/message-list2.component';
+import { BoissonListComponent } from './component/private/boisson/boisson-list/boisson-list.component';
+import { AddBoissonComponent } from './component/private/boisson/add-boisson/add-boisson.component';
+import { UpdateBoissonComponent } from './component/private/boisson/update-boisson/update-boisson.component';
+import { CofeListComponent } from './component/private/cofes/cofe-list/cofe-list.component';
+import { AddCofeComponent } from './component/private/cofes/add-cofe/add-cofe.component';
+import { UpdateCofeComponent } from './component/private/cofes/update-cofe/update-cofe.component';
+import { UsersComponent } from './component/private/users/users.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +70,13 @@ import { MessageList2Component } from './component/private/messages/message-list
     FoodListComponent,
     UpdateFoodComponent,
     MessageList2Component,
+    BoissonListComponent,
+    AddBoissonComponent,
+    UpdateBoissonComponent,
+    CofeListComponent,
+    AddCofeComponent,
+    UpdateCofeComponent,
+    UsersComponent,
 
   ],
   imports: [

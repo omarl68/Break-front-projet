@@ -1,0 +1,35 @@
+<!-- TOPBAR -->
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg">
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3" routerLink="/"
+      ><img src="assets/images/Asset 3.svg" class="img-fluid img" routerLink="/" alt="" />
+    </a>
+  
+    <!-- Navbar-->
+    <div class="ms-auto">
+      <!-- Default dropstart button -->
+      <div class="btn-group dropstart">
+        <a
+          type="a"
+          class="nav-link dropdown-toggle button-u"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+        <i class="fas fa-user fa-fw"></i
+          >
+        </a>
+        <ul class="dropdown-menu mt-4">
+          <!-- Dropdown menu links -->
+          <li><a class="dropdown-item">paramètres</a></li>
+          <li><a class="dropdown-item">journal d'activité</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="logout()">Se déconnecter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

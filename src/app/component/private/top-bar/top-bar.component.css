@@ -1,0 +1,23 @@
+.navbar-brand img{
+    width: 150px;
+}
+
+li a {
+    cursor: pointer;
+}
+
+.bg{
+    background-color: #312783;
+}
+
+.button-u{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 10px 10px 2px ;
+    
+}
+.img{
+    width: 10px;
+    height: 50px;
+}

@@ -2,6 +2,12 @@ import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountSettingComponent } from './component/private/account-setting/account-setting.component';
+import { AddBoissonComponent } from './component/private/boisson/add-boisson/add-boisson.component';
+import { BoissonListComponent } from './component/private/boisson/boisson-list/boisson-list.component';
+import { UpdateBoissonComponent } from './component/private/boisson/update-boisson/update-boisson.component';
+import { AddCofeComponent } from './component/private/cofes/add-cofe/add-cofe.component';
+import { CofeListComponent } from './component/private/cofes/cofe-list/cofe-list.component';
+import { UpdateCofeComponent } from './component/private/cofes/update-cofe/update-cofe.component';
 import { DashboardComponent } from './component/private/dashboard/dashboard.component';
 import { AddFoodComponent } from './component/private/food/add-food/add-food.component';
 import { FoodListComponent } from './component/private/food/food-list/food-list.component';
@@ -9,6 +15,7 @@ import { UpdateFoodComponent } from './component/private/food/update-food/update
 import { MessageList2Component } from './component/private/messages/message-list2/message-list2.component';
 import { MessagesComponent } from './component/private/messages/messages.component';
 import { OrderSuccessComponent } from './component/private/order-success/order-success.component';
+import { UsersComponent } from './component/private/users/users.component';
 import { BoissonsComponent } from './component/public/boissons/boissons.component';
 import { ContactComponent } from './component/public/contact/contact.component';
 import { FoodComponent } from './component/public/food/food.component';
@@ -94,6 +101,34 @@ const routes: Routes = [
   {
     path: 'update-food',
     component: UpdateFoodComponent
+  },
+  {
+    path: 'add-boisson',
+    component: AddBoissonComponent
+  },
+  {
+    path: 'update-boisson',
+    component: UpdateBoissonComponent
+  },
+  {
+    path: 'boisson-list',
+    component: BoissonListComponent
+  },
+  {
+    path: 'add-cofe',
+    component: AddCofeComponent
+  },
+  {
+    path: 'update-cofe',
+    component: UpdateCofeComponent
+  },
+  {
+    path: 'cofe-list',
+    component: CofeListComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
   },
   {
     path: 'messages/:id',
